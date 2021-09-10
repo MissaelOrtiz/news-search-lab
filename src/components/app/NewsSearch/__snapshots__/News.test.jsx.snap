@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News renders out a single article 1`] = `
+<h2>
+  How NOT to fail
+</h2>
+`;
