@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls displays a form with an input and submit button 1`] = `
+<form
+  data-testid="controls-form"
+>
+  <label>
+     New Search Query?
+    <input
+      type="text"
+      value="Dogssharknado"
+    />
+  </label>
+  <button
+    aria-label="find-articles"
+  >
+    Submit
+  </button>
+</form>
+`;

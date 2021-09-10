@@ -2,8 +2,17 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div
+    style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;"
+  >
+    <h1>
+      Loading...
+    </h1>
+    <img
+      alt="loading spinner"
+      src="https://icon-library.com/images/ajax-loading-icon/ajax-loading-icon-2.jpg"
+      style="height: 200px; width: 200px;"
+    />
+  </div>
 </DocumentFragment>
 `;
