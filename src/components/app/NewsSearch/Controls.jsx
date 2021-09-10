@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Controls = ({ search, onSearchChange, onSubmit }) => (
-  <form onSubmit={onSubmit}>
+  <form onSubmit={onSubmit} data-testid="controls-form">
     <label> New Search Query?
       <input
         type="text"
