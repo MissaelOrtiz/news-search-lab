@@ -1,4 +1,6 @@
 /* eslint-disable max-len */
+import dotenv from 'dotenv';
+dotenv.config();
 import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -13,14 +15,14 @@ describe('NewsContainer', () => {
     expect(ul).not.toBeEmptyDOMElement();
 
     const input = await screen.findByLabelText('New Search Query?');
-    userEvent.type(input, 'dogs');
+    userEvent.type(input, '{selectall}{backspace}sharknado');
 
     const submitButton = await screen.findByRole('button', { name: 'find-articles' });
     userEvent.click(submitButton);
 
     return waitFor(() => {
-      const articles = screen.getByText('WELCOME TO DOGS NEWS', { exact: false });
-      expect(articles).toHaveLength(1);
+      const articles = screen.getAllByText('Sharknado', { exact: false });
+      expect(articles.length).toEqual(5);
     });
   });
 });

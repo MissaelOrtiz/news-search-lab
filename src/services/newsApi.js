@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 export const fetchArticles = async (search) => {
-  const res = await fetch(`https://newsapi.org/v2/everything?qInTitle=${search}&apiKey=4f325ec291324b609e8690941249cda9`);
+  const res = await fetch(`https://newsapi.org/v2/everything?qInTitle=${search}&apiKey=${process.env.EVERYTHING_KEY}`);
   const json = await res.json();
   const articles = json.articles;
   const mungedArticles = mungeThese(articles);

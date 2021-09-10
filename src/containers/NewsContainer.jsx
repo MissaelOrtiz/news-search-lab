@@ -8,7 +8,7 @@ export default class NewsContainer extends Component {
     state = {
       articles: [],
       loading: true,
-      search: 'sharknado'
+      search: 'dogs'
     }
 
     async componentDidMount() {
@@ -33,15 +33,15 @@ export default class NewsContainer extends Component {
       if(loading) {
         return <LoadingComponent />;
       } else if(articles.length > 0) {
-        return <>
+        return (<>
           <h1>WELCOME TO {search.toUpperCase()} NEWS</h1>
           <Controls search={search} 
             onSearchChange={this.handleSearchChange} 
             onSubmit={this.handleSubmit}/>
           <NewsList articles={articles} />
-        </>;
+        </>);
         
       }
-      <h2>Something went wrong :^(</h2>;
+      return <h2>Something went wrong :^(</h2>;
     }
 }
