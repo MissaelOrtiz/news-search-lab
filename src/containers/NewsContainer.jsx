@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import LoadingComponent from '../components/app/NewsSearch/LoadingComponent';
+import NewsList from '../components/app/NewsSearch/NewsList';
 import { fetchArticles } from '../services/newsApi';
 
 export default class NewsContainer extends Component {
     state = {
       articles: [],
       loading: true,
-      search: 'dogs'
+      search: 'sharknado'
     }
 
     async componentDidMount() {
@@ -16,13 +17,15 @@ export default class NewsContainer extends Component {
 
     render() {
       const { loading, articles, search } = this.state;
-
-      if(loading) return <LoadingComponent />;
-
-      return (
-        <div>
-        WELCOME TO NEWS 
-        </div>
-      );
+      if(loading) {
+        return <LoadingComponent />;
+      } else if(articles.length > 0) {
+        return <>
+          <h1>WELCOME TO {search.toUpperCase()} NEWS</h1>
+          <NewsList articles={articles} />
+        </>;
+        
+      }
+      <h2>Something went wrong :^(</h2>;
     }
 }
