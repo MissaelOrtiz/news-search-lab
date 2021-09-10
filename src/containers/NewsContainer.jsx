@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LoadingComponent from '../components/app/NewsSearch/LoadingComponent';
 import { fetchArticles } from '../services/newsApi';
 
 export default class NewsContainer extends Component {
@@ -14,6 +15,10 @@ export default class NewsContainer extends Component {
     }
 
     render() {
+      const { loading, articles, search } = this.state;
+
+      if(loading) return <LoadingComponent />;
+
       return (
         <div>
         WELCOME TO NEWS 
