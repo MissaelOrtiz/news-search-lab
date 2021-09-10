@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsList renders out a list of an article 1`] = `
+<ul
+  aria-label="articles"
+>
+  <li>
+    <img
+      role="img"
+      src="https://cdn.discordapp.com/attachments/870470157275910204/882420160567345162/20210624_003711.jpg"
+    />
+    <h2>
+      How to Play: A comprehensive guide
+    </h2>
+    <p>
+       By 
+      The Man Himself
+       [via 
+      ]
+    </p>
+    <p>
+      You just gotta roll some dice and BIM BOOM BAM all done.
+    </p>
+  </li>
+  <li>
+    <img
+      role="img"
+      src="https://cdn.discordapp.com/attachments/870470157275910204/882420160567345162/20210624_003711.jpg"
+    />
+    <h2>
+      How to Code: A comprehensive guide
+    </h2>
+    <p>
+       By 
+      The Man Himself
+       [via 
+      ]
+    </p>
+    <p>
+      You just gotta write some code and BIM BOOM BAM all done.
+    </p>
+  </li>
+</ul>
+`;
